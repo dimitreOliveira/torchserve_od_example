@@ -1,0 +1,5 @@
+torch==1.9.0+cpu
+torch-model-archiver @ file:///home/dimitre/Desktop/serve/model-archiver
+torch-workflow-archiver @ file:///home/dimitre/Desktop/serve/workflow-archiver
+torchserve @ file:///home/dimitre/Desktop/serve
+torchvision==0.10.0+cpu
