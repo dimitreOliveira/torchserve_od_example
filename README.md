@@ -7,6 +7,7 @@
 - [Run locally](#run-locally)
 - [Run with Docker](#run-with-docker)
 - [Content](#content)
+- [Inference](#inference)
 - [References](#references)
 
 
@@ -33,11 +34,6 @@ sh scripts/archive_model.sh
 **Start TorchServe**
 ```bash
 sh scripts/start_torchserve.sh
-```
-
-**Run sample inference using REST APIs**
-```bash
-curl http://127.0.0.1:8080/predictions/densenet161 -T ./samples/man.jpg
 ```
 
 **Stop TorchServe**
@@ -73,12 +69,24 @@ sh scripts/archive_model.sh
 sh scripts/start_torchserve.sh
 ```
 
+**Stop TorchServe**
+```bash
+torchserve --stop
+```
+
+
+## Inference
+**Run sample inference using REST APIs**
+```bash
+curl http://127.0.0.1:8080/predictions/densenet161 -T ./samples/man.jpg
+```
+
 
 ## Content
-- models: ...
-- samples: ...
-- scripts: ...
-- utils: ...
+- models — Model's assets.
+- samples — Image samples used to test inference.
+- scripts — Scripts for general usage.
+- utils — Utility files.
 
 
 ## References
