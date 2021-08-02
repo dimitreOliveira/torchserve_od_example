@@ -1,7 +1,7 @@
 # Simple example of using TorchServe to serve a PyTorch Object Detection model
 
 
-# Content
+# Repository content
 - [Local Setup](#local-setup)
 - [Docker Setup](#docker-setup)
 - [Run locally](#run-locally)
