@@ -12,8 +12,11 @@
 
 ## Local Setup
 > Optional
+- PyTorch - Refer to the [official PyTorch installation guide](https://pytorch.org/get-started/locally/#linux-installation)
+- Torchserve - Refer to the [official Torchserve installation guide](https://github.com/pytorch/serve#install-torchserve-and-torch-model-archiver)
 
 ## Docker Setup
+- Docker - Refer to the [official docker installation guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)
 
 
 ## Run locally
