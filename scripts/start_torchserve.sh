@@ -1,4 +1,4 @@
 torchserve --start \
 --ncs \
---model-store model_store \
+--model-store model-store \
 --models fastrcnn=fastrcnn.mar
