@@ -1,9 +1,7 @@
 FROM pytorch/torchserve:latest
 
-EXPOSE 8080
+COPY ./utils utils
 
 COPY ./models models
 
 COPY ./scripts scripts
-
-COPY ./utils utils

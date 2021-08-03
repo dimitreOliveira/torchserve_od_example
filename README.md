@@ -6,6 +6,7 @@
 - [Docker Setup](#docker-setup)
 - [Run locally](#run-locally)
 - [Run with Docker](#run-with-docker)
+- [Run with Docker compose](#run-with-docker-compose)
 - [Content](#content)
 - [Inference](#inference)
 - [References](#references)
@@ -54,7 +55,6 @@ sudo docker run -p 8080:8080 -u 0 -ti docker_torchserve /bin/bash
 ```
 
 **Download FastRCNN model weights**
-> Don't needed if the model weights is already downloaded at "models" folder
 ```bash
 sh scripts/get_fastrcnn.sh
 ```
@@ -72,6 +72,18 @@ sh scripts/start_torchserve.sh
 **Stop TorchServe**
 ```bash
 torchserve --stop
+```
+
+
+## Run with Docker compose
+**Build image and run with Build and run your app with Docker compose**
+```bash
+sudo docker-compose up
+```
+
+**Stop the application**
+```bash
+docker-compose down
 ```
 
 

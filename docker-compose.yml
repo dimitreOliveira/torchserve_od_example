@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  api:
+    build: .
+    command: sh /home/model-server/scripts/get_fastrcnn.sh
+    command: sh /home/model-server/scripts/archive_model.sh
+    command: sh /home/model-server/scripts/start_torchserve.sh
+    volumes:
+        - ./model-store:/home/model-server/model-store
+    ports:
+      - "8080:8080"
