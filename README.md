@@ -90,8 +90,10 @@ docker-compose down
 ## Inference
 **Run sample inference using REST APIs**
 ```bash
-curl http://127.0.0.1:8080/predictions/densenet161 -T ./samples/man.jpg
+curl http://127.0.0.1:8080/predictions/densenet161 -T ./samples/man2.jpg
 ```
+
+**Or run the "query_notebook.ipynb" notebook**
 
 
 ## Content
@@ -99,6 +101,7 @@ curl http://127.0.0.1:8080/predictions/densenet161 -T ./samples/man.jpg
 - samples — Image samples used to test inference.
 - scripts — Scripts for general usage.
 - utils — Utility files.
+- query_notebook — Jupyter notebook for iterative inference.
 
 
 ## References
