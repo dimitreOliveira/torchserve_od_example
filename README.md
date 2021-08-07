@@ -4,6 +4,7 @@
 # Repository content
 - [Local Setup](#local-setup)
 - [Docker Setup](#docker-setup)
+- [General Setup](#general-setup)
 - [Run locally](#run-locally)
 - [Run with Docker](#run-with-docker)
 - [Run with Docker compose](#run-with-docker-compose)
@@ -17,8 +18,16 @@
 - PyTorch - Refer to the [official PyTorch installation guide](https://pytorch.org/get-started/locally/#linux-installation)
 - Torchserve - Refer to the [official Torchserve installation guide](https://github.com/pytorch/serve#install-torchserve-and-torch-model-archiver)
 
+
 ## Docker Setup
 - Docker - Refer to the [official docker installation guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)
+
+
+## General Setup
+**Download FastRCNN model weights**
+```bash
+sh scripts/get_fastrcnn.sh
+```
 
 
 ## Run locally
@@ -51,12 +60,7 @@ sudo docker build -f Dockerfile -t docker_torchserve .
 
 **Run the Docker container**
 ```bash
-sudo docker run -p 8080:8080 -u 0 -ti docker_torchserve /bin/bash
-```
-
-**Download FastRCNN model weights**
-```bash
-sh scripts/get_fastrcnn.sh
+sudo docker run -p 8080:8080 -u 0 -ti -v $(pwd)/models/:/home/model-server/models/ docker_torchserve /bin/bash
 ```
 
 **Archive model**
@@ -90,7 +94,7 @@ docker-compose down
 ## Inference
 **Run sample inference using REST APIs**
 ```bash
-curl http://127.0.0.1:8080/predictions/densenet161 -T ./samples/man2.jpg
+curl http://127.0.0.1:8080/predictions/fastrcnn -T ./samples/man2.jpg
 ```
 
 **Or run the "query_notebook.ipynb" notebook**
