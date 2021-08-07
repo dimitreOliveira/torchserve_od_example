@@ -31,11 +31,6 @@ sh scripts/get_fastrcnn.sh
 
 
 ## Run locally
-**Download FastRCNN model weights**
-```bash
-sh scripts/get_fastrcnn.sh
-```
-
 **Archive model**
 ```bash
 sh scripts/archive_model.sh
@@ -97,7 +92,7 @@ docker-compose down
 curl http://127.0.0.1:8080/predictions/fastrcnn -T ./samples/man2.jpg
 ```
 
-**Or run the "query_notebook.ipynb" notebook**
+**Or iteratively run the "query_notebook.ipynb" notebook**
 
 
 ## Content
